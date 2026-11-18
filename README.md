@@ -1,6 +1,7 @@
 Juan Francisco Green Basora.
 Matrícula:26-ESON-2-008.
-using System;
+
+using System
 
 namespace Tarea2
 {

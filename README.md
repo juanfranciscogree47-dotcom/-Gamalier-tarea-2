@@ -1,108 +1,36 @@
-Juan Francisco Green Basora.
-Matrícula:26-ESON-2-008.
+# Tarea 2 - Áreas y mayoría de edad
 
-using System
+**Nombre:** Juan Francisco Green Basora
+**Matrícula:** 26-ESON-2-008
+**Asignatura:** Programación
+**Lenguaje:** C# (.NET)
 
-namespace Tarea2
-{
-    class Program
-    {
-        // funcion 1: area del triangulo
-        static double AreaTriangulo(double base1, double altura)
-        {
-            double area;
-            area = (base1 * altura) / 2;
-            return area;
-        }
+## Descripción
 
-        // funcion 2: area del cuadrado
-        static double AreaCuadrado(double lado)
-        {
-            double area;
-            area = lado * lado;
-            return area;
-        }
+El programa pide al usuario los datos necesarios y calcula el área de un triángulo,
+de un cuadrado y de un círculo, además de indicar si una persona es mayor o menor
+de edad. Cada cálculo está hecho dentro de su propia función y al final se muestra
+un resumen con todos los resultados.
 
-        // funcion 3: area del circulo
-        static double AreaCirculo(double radio)
-        {
-            double area;
-            area = 3.14 * radio * radio;
-            return area;
-        }
+## Funciones
 
-        // funcion 4: mayor o menor de edad
-        static string MensajeEdad(int edad)
-        {
-            string mensaje;
+- **AreaTriangulo(base, altura):** calcula el área del triángulo con la fórmula base × altura / 2.
+- **AreaCuadrado(lado):** calcula el área del cuadrado multiplicando el lado por sí mismo.
+- **AreaCirculo(radio):** calcula el área del círculo usando 3.14 × radio × radio.
+- **MensajeEdad(edad):** devuelve un mensaje indicando si la persona es mayor de edad (18 años o más) o menor de edad.
 
-            if (edad >= 18)
-            {
-                mensaje = "La persona es mayor de edad";
-            }
-            else
-            {
-                mensaje = "La persona es menor de edad";
-            }
+## Ejemplos de ejecución
 
-            return mensaje;
-        }
+| Cálculo | Datos de entrada | Resultado |
+| --- | --- | --- |
+| Área del triángulo | base 10, altura 5 | 25 |
+| Área del cuadrado | lado 4 | 16 |
+| Área del círculo | radio 3 | 28.26 |
+| Mayoría de edad | edad 20 | La persona es mayor de edad |
+| Mayoría de edad | edad 15 | La persona es menor de edad |
 
-        static void Main(string[] args)
-        {
-            double base1, altura, lado, radio;
-            double areaTriangulo, areaCuadrado, areaCirculo;
-            int edad;
+## Cómo ejecutar
 
-            Console.WriteLine("========================================");
-            Console.WriteLine("  TAREA 2 - AREAS Y MAYORIA DE EDAD");
-            Console.WriteLine("========================================");
-            Console.WriteLine();
-
-            // triangulo
-            Console.WriteLine("AREA DEL TRIANGULO");
-            Console.Write("Digite la base: ");
-            base1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Digite la altura: ");
-            altura = Convert.ToDouble(Console.ReadLine());
-            areaTriangulo = AreaTriangulo(base1, altura);
-            Console.WriteLine("El area del triangulo es: " + areaTriangulo);
-            Console.WriteLine();
-
-            // cuadrado
-            Console.WriteLine("AREA DEL CUADRADO");
-            Console.Write("Digite el lado: ");
-            lado = Convert.ToDouble(Console.ReadLine());
-            areaCuadrado = AreaCuadrado(lado);
-            Console.WriteLine("El area del cuadrado es: " + areaCuadrado);
-            Console.WriteLine();
-
-            // circulo
-            Console.WriteLine("AREA DEL CIRCULO");
-            Console.Write("Digite el radio: ");
-            radio = Convert.ToDouble(Console.ReadLine());
-            areaCirculo = AreaCirculo(radio);
-            Console.WriteLine("El area del circulo es: " + areaCirculo);
-            Console.WriteLine();
-
-            // edad
-            Console.WriteLine("MAYORIA DE EDAD");
-            Console.Write("Digite la edad: ");
-            edad = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(MensajeEdad(edad));
-            Console.WriteLine();
-
-            // resumen
-            Console.WriteLine("========================================");
-            Console.WriteLine("  RESUMEN DE LOS RESULTADOS");
-            Console.WriteLine("========================================");
-            Console.WriteLine("Area del triangulo: " + areaTriangulo);
-            Console.WriteLine("Area del cuadrado: " + areaCuadrado);
-            Console.WriteLine("Area del circulo: " + areaCirculo);
-            Console.WriteLine(MensajeEdad(edad));
-            Console.WriteLine();
-            Console.WriteLine("Presione una tecla para salir...");
-            Console.ReadKey();
-        }
-    }
-}
+1. Abrir la carpeta del proyecto en Visual Studio.
+2. Ejecutar el programa con F5.
+3. Digitar los datos que pide la consola.
